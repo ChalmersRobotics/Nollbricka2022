@@ -152,7 +152,7 @@ void rainbowEq() {
 void rainbowEqMinBrightness() {
     for (int sectionIndex = 0; sectionIndex < 7; sectionIndex++) {
         unsigned short brightness = MSGEQ[sectionIndex];
-        brightness = constrain(brightness, 30, 255);
+        brightness = constrain(brightness + 30, 30, 255);
         
         for (int side = 0; side < 2; side++) {
             for (int dot = ledSections[sectionIndex][side][0]; dot <= ledSections[sectionIndex][side][1]; dot++) {
